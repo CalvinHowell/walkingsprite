@@ -1,0 +1,26 @@
+<html>
+<head><title>Animated Sprite</title>
+<link rel="stylesheet" type="text/css" href="">
+<style type="text/css">
+	.sprited {
+		background:url(images/adam.png);
+		width: 120px;
+	height: 180px;
+	animation: walking 1.0s steps(8) infinite;
+	}
+@keyframes walking {
+	from { background-position: 0px; }
+	to { background-position: -960px; }
+}
+
+</style>
+</head>
+<body>
+	<div class="sprited"></div>
+	<audio controls autoplay hidden>
+  <source src="music/walkin.ogg" type="audio/ogg">
+  <source src="music/walkin.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</body>
+</html>
