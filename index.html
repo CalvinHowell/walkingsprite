@@ -17,10 +17,26 @@
 </head>
 <body>
 	<div class="sprited"></div>
-	<audio controls autoplay hidden>
+	<audio controls autoplay hidden id="music" loop>
   <source src="music/walkin.ogg" type="audio/ogg">
   <source src="music/walkin.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
+<button onclick="setvolumehalf()">Lower volume</button>
+<button onclick="setvolumefull()">Increase volume</button>
+
+<script type="text/javascript">
+
+	function setvolumehalf() {
+		if(music.volume > 0.1){
+		music.volume -=0.1;
+	}
+	}
+	function setvolumefull() {
+		if(music.volume <1){
+		music.volume +=0.1;
+	}
+	}
+</script>
 </body>
 </html>
